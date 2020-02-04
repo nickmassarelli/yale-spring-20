@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- this is the name that will appear on the tab in your browser -->
+    <title>Nick Massarelli</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/main.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+<style>
+    body{
+      margin: 23px 0px 0px 0px;
+    }
+    li{
+      font-family: 'PT Serif', serif;
+      text-align: left;
+      font-size: 15px;
+      line-height: 25px;
+      text-decoration: none;
+      color: black;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    #lefante_01 {
+      margin: 5px 0px 10px 0px;
+    }
+    a:hover{
+      text-decoration: line-through;
+    }
+    p{
+      line-height: 10px;
+    }
+
+    img.bg {
+      z-index: -3;
+
+			/* Set up proportionate scaling */
+			height: 100%;
+			width: auto;
+
+			/* Set up positioning */
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+
+    div{
+      color: white;
+      z-index: 3;
+    }
+
+    ol{
+      color: white;
+    }
+    li{
+      color: white;
+    }
+
+.nav{
+  position: fixed;
+  bottom: 20px;
+  left: 25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="images_01/lefante_01/cropped/1995.png" class="bg">
+
+  <div>
+    <ol>
+      <li onclick="myFunction()">1 Lefante Way, Bayonne, NJ</li>
+        <div id="lefante_01">
+          <p><a href="lefante_1995.html">1995</a></p>
+          <p><a href="lefante_2002.html">2002</a></p>
+          <p><a href="lefante_2004.html">2004</a></p>
+          <p><a href="lefante_2005.html">2005</a></p>
+          <p><a href="lefante_2008.html">2008</a></p>
+          <p><a href="lefante_2010.html">2010</a></p>
+          <p><a href="lefante_2014.html">2014</a></p>
+          <p><a href="lefante_2018.html">2018</a></p>
+        </div>
+
+      <li>317 Broadway Avenue, Bayonne, NJ</li>
+      <li>1800 Arch Street, Philadelphia, PA</li>
+      <li>1700 N. 5th Street, Philadelphia, PA</li>
+      <li>24 Grove Street, Worcester, MA</li>
+      <li>215 North Street, Cape May, NJ</li>
+      <li>Worcester Regional Airport, Worcester, MA</li>
+      <li>Hudson Yards, New York, NY</li>
+      <li>World Trade Center, New York, NY</li>
+    </ol>
+  </div>
+
+  <div class="nav">
+    <p><a href="trail.html">Home</a></p>
+  </div>
+
+  <script>
+function myFunction() {
+  var x = document.getElementById("lefante_01");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
+</body>
+</html>
