@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- this is the name that will appear on the tab in your browser -->
+    <title>hyperlink.html</title>
+    <meta charset="utf-8" />
+    <!-- <link rel="stylesheet" href="assets/main.css" type="text/css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    <style>
+
+        @font-face {
+                  font-family: 'IBM Plex Mono';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("../IBM-Plex-Mono/fonts/complete/woff2/IBMPlexMono-Regular.woff2") format("woff2"), url("fonts/IBM-Plex-Mono/fonts/complete/woff/IBMPlexMono-Regular.woff") format("woff"); }
+
+                @font-face {
+                  font-family: 'IBM Plex Mono';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBM-Plex-Mono/fonts/split/woff2/IBMPlexMono-Regular-Cyrillic.woff2") format("woff2");
+                  unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5, U+04AA-04AB, U+04AE-04B3, U+04B6-04BB, U+04C0-04C2, U+04CF-04D9, U+04DC-04DF, U+04E2-04E9, U+04EE-04F5, U+04F8-04F9; }
+
+                @font-face {
+                  font-family: 'IBM Plex Mono';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBM-Plex-Mono/fonts/split/woff2/IBMPlexMono-Regular-Pi.woff2") format("woff2");
+                  unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081, U+2083, U+2085-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+EBE1-EBE7, U+ECE0, U+EFCC; }
+
+                @font-face {
+                  font-family: 'IBM Plex Mono';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBM-Plex-Mono/fonts/split/woff2/IBMPlexMono-Regular-Latin3.woff2") format("woff2");
+                  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+                @font-face {
+                  font-family: 'IBM Plex Mono';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBM-Plex-Mono/fonts/split/woff2/IBMPlexMono-Regular-Latin2.woff2") format("woff2");
+                  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF, U+FB01-FB02; }
+
+                @font-face {
+                  font-family: 'IBM Plex Mono';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBM-Plex-Mono/fonts/split/woff2/IBMPlexMono-Regular-Latin1.woff2") format("woff2");
+                  unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+2074, U+20AC, U+2122, U+2212, U+FB01-FB02; }
+
+        body {
+            margin: 0px 0px 0px 0px;
+            background-color: #24272d;
+            font-family: 'IBM Plex Mono', serif;
+        }
+
+        h2{
+            font-size: 17px;
+            font-family: 'IBM Plex Mono', serif;
+            color: white;
+        }
+
+        li {
+            font-family: 'IBM Plex Mono', serif;
+            text-align: left;
+            text-decoration: none;
+            color: white;
+            list-style: none;
+        }
+
+        ol {
+            padding-left: 22px;
+            list-style: none;
+            counter-reset: my-awesome-counter;
+            width: 500px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        /* unvisited link */
+        .red:link {
+            color: #f83939;
+        }
+
+        /* visited link */
+        .red:visited {
+            color: #f83939;
+        }
+
+        /* mouse over link */
+        .red:hover {
+            text-decoration: underline;
+        }
+
+        /* selected link */
+        .red:active {
+            color: #8bc34a;
+        }
+
+        .green:link {
+            color: #8bc34a;
+        }
+
+        /* visited link */
+        .green:visited {
+            color: #8bc34a;
+        }
+
+        /* mouse over link */
+        .green:hover {
+            text-decoration: underline;
+        }
+
+        /* selected link */
+        .green:active {
+            color: #8bc34a;
+        }
+
+        .blue:link {
+            color: #2196f3;
+        }
+
+        /* visited link */
+        .blue:visited {
+            color: #2196f3;
+        }
+
+        /* mouse over link */
+        .blue:hover {
+            text-decoration: underline;
+        }
+
+        /* selected link */
+        .blue:active {
+            color: #2196f3;
+        }
+
+        p {
+            line-height: 5px;
+            color: white;
+        }
+
+        .nav {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+        }
+
+        .DateList {
+            display: none;
+            list-style-type: none;
+            padding-left: 30px;
+            font-size: 17px;
+        }
+
+        .DateList li{
+            margin-bottom: 20px;
+        }
+
+        .DateList.is-visible {
+            display: block;
+        }
+
+        span {
+            margin-right: 20px;
+            color: gray;
+        }
+
+        .top-bar {
+            background-color: #131518;
+            margin: 0px;
+            height: 35px;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            color: gray;
+            text-align: left;
+        }
+        .bottom-bar {
+            background-color: #131518;
+            margin: 0px;
+            height: 35px;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            color: gray;
+            text-align: left;
+        }
+
+        .title {
+            padding-left: 20px;
+            padding-top: 6px;
+            margin: 0px;
+        }
+
+         a .title{
+            padding-bottom: 5px;
+        }
+
+        .LocationList {
+            margin: 55px 0px 0px 0px;
+        }
+
+        .right-side{
+            width: 550px;
+            position: fixed;
+            top: 42px;
+            right: 300px;
+        }
+
+        .right-side-two{
+            width: 600px;
+            position: fixed;
+            top: 325px;
+            right: -255px;
+            transform: rotate(90deg);
+        }
+
+        .footer{
+            width: 550px;
+            position: fixed;
+            bottom: 13px;
+            right: 300px;
+        }
+
+        li .indent{
+            margin-left: 50px;
+        }
+
+        li{
+            margin-left: 10px;
+        }
+
+        .note{
+            color: gray;
+        }
+        .top-ten{
+            color: #8bc34a;
+        }
+        .image-one:hover{
+            filter: invert(100%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-bar"><h2 class="title">hypertext.html</h2></div>
+    <div class="bottom-bar"><h2 class="title"><a class="red" href="">→ red hypertext is for source citation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="blue" href="">→ blue hypertext is for suggested further research</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="green">→ green hypertext is for internal links</a></h2></div>
+    <div>
+        <ol class="LocationList">
+            <li class="Location">
+                <h2 class="top-ten"><span>&nbsp;1</span><a>ted nelson</a></h2>
+                <ul class="DateList">
+                    <li><a href="https://en.wikipedia.org/wiki/Ted_Nelson" class="red">"american pioneer of information <br>technology, philosopher and sociologist. he coined the terms hypertext and hypermedia in 1963 and published them in 1965. nelson coined the terms transclusion, virtuality, and intertwingularity (in literary machines), and teledildonics. according to a 1997 forbes profile, nelson "sees himself as a literary romantic, like a cyrano de bergerac, or 'the orson welles of software.'"</a></li>
+                    <li>most well known for founding <a href="http://www.xanadu.net/" class="blue">project xanadu</a>, an <a href="https://wordlift.io/blog/en/entity/project-xanadu/" class="red">alternative to the world wide</a> web with unbreakable, two-way links, a simplified copyright system, and side-by-side comparison between connected documents<li>
+                    <li>nelson has written many books on the subject of information technology including:</li>
+                    <li class="indent"><a href="https://www.amazon.com/Computer-Lib-Dream-Machines-Revised/dp/0914845497" class="blue">Computer Lib / Dream Machines (1974)</a><br><a href="https://www.amazon.com/home-computer-revolution-Theodor-Nelson/dp/B0006WRJD8" class="blue">The Home Computer Revolution (1977)</a><br><a href="https://www.amazon.com/Literary-Machines-Theodor-Holm-Nelson/dp/0893470562" class="blue">Literary Machines (1981)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Intertwingularity"><img src="tn-sketch_03.png" alt="Smiley face" height="300px"></a></li>
+                    <li class="indent">coined the term <a href="https://en.wikipedia.org/wiki/Intertwingularity" class="blue">"intertwingularity"</a> in his 1974 book, "computer lib/dream machines"</li>
+                    <li><a href="http://ted.hyperland.com/" class="blue">ted nelson's personal website</a></li>
+                    <li>nelson was included in werner herzog's 2016 film <a href="https://youtu.be/Bqx6li5dbEY" class="blue">"lo and behold"</a></li>
+                </ul>
+            </li>
+
+            <li class="Location">
+                <h2 class="top-ten"><span>&nbsp;2</span>types of hypertext</h2>
+                <ul class="DateList">
+                    <li><a href="https://techterms.com/definition/link" class="blue">"hyperlinks,</a> when used in a hypertext document usually replace the current piece of hypertext with the destination document."</a></li>
+                    <li><a href="https://wordpress.liquid.info/10/stretchtext/frode/" class="blue">"StretchText,</a> which expands or contracts the content in place, thereby giving more control to the reader in determining the level of detail of the displayed document."</a></li>
+                    <li><a href="https://www.mediawiki.org/wiki/Transclusion" class="blue">"transclusion,</a> where text or other content is included by reference and automatically rendered in place."</a></li>
+                </ul>
+            </li>
+            <li class="Location">
+                <h2 class="top-ten"><span>&nbsp;5</span>as we may think</h2>
+                <ul class="DateList">
+                    <li>an essay written by vannevar bush in 1945 which has <a href="https://en.wikipedia.org/wiki/As_We_May_Think" class="red">"anticipated many aspects of information society"</a></li>
+                    <li><a href="https://www.google.com/search?q=as+we+may+think&sxsrf=ACYBGNTFiKl8F1QEpBvQpk5D4hesYsH_fA:1581009127874&source=lnms&tbm=isch&sa=X&ved=2ahUKEwio-8_7tb3nAhVcmHIEHbMGD2YQ_AUoAnoECBIQBA&biw=1866&bih=1078#imgrc=O0rWV15yvjcMWM"><img src="as-we-may-think_01.png" alt="Smiley face" height="300px"></a></li>
+                    <li><a href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/" class="blue">visit this page to read the full article</a></li>
+                    <li class="indent">“consider a future device …  in which an individual stores all his books, records, and communications, and which is mechanized so that it may be consulted with exceeding speed and flexibility. it is an enlarged intimate supplement to his memory.”</li>
+                </ul>
+            </li>
+
+            <li class="Location">
+                <h2 class="top-ten"><span>&nbsp;6</span>timeline</h2>
+                <ul class="DateList">
+                    <li><a href="http://www.boraski.com/www/ht.html" class="red">the history of hypertext</a></li>
+                    <li>1945</li>
+                    <li class="indent">vannevar bush (science advisor to president roosevelt during wwii) proposes memex in "as we may think."</li>
+                    <li>1965</li>
+                    <li class="indent">ted nelson invents the word hypertext.</li>
+                    <li>1978</li>
+                    <li class="indent">a team at mit, headed by andrew lippman, develops the aspen movie map, the first true example of a multimedia application including a videodisk. created at the mit architecture machine group, which later becomes the <a href="https://www.media.mit.edu/" class="blue">media lab.</a></li>
+                    <li>1987</li>
+                    <li class="indent">apple delivers hypercard free with every macintosh, the first widely available personal hypermedia authoring system. not as simple as html because most documents require writing a script. The acm organizes the first conference on hypertext.</li>
+                    <li>1989</li>
+                    <li class="indent">tim berners-lee proposes the world wide web (www)</li>
+                </ul>
+            </li>
+            <li class="Location">
+                <h2 class="top-ten"><span>&nbsp;7</span>hypertext markup language</h2>
+                <ul class="DateList">
+                    <li><a href="https://techterms.com/definition/html" class="red">known as html</a></li>
+                    <li class="indent">html is the language used to create webpages. "hypertext" refers to the hyperlinks that an html page may contain. <a href="https://techterms.com/definition/markup_language" class="blue">"markup language"</a> refers to the way tags are used to define the page layout and elements within the page.</li>
+                </ul>
+            </li>
+            <li class="Location">
+                <h2 class="top-ten"><span>&nbsp;8</span>the internet hunt</h2>
+                <ul class="DateList">
+                    <li><a href="https://www.savetz.com/yic/YIC10FI_17.html" class="red">what is the internet hunt, 1992</a></li>
+                    <li>"what's the capital of liechtenstein? what are the top ten u.s. television programs according to the most recent nielson ratings? can you get aids from kissing? What was the total amount of sales in liquor stores in the united states last september?"</li>
+                    <li>"<a href="https://en.wikipedia.org/wiki/Rick_Gates_(Internet_pioneer)" class="blue">rick gates</a> is asking questions like these in a monthly contest dubbed "the Internet Hunt." Participants in the Hunt score points for finding the answers to Gates' questions--but not using traditional reference material like encyclopedias and almanacs. Instead, hunters must find the answers online, using information sources on the net."</li>
+                    <li class="indent">"gates says the internet hunt has accomplished three things: it helps Net users realize the enormous amount of information on the net, and it helps novices--whom he calls "settlers"--understand how to move around the "trails" that more experienced users have blazed. it also provides training in context, which works better for most of us than learning from a book or a chalkboard."</li>
+                </ul>
+            </li>
+            <li class="Location">
+                <h2 class="top-ten"><span>&nbsp;9</span>project xanadu</h2>
+                <ul class="DateList">
+                    <li><a href="http://www.xanadu.net/" class="blue">project xanadu</a> was first created by ted nelson 1960<li>
+                    <li><a href="https://wordlift.io/blog/en/entity/project-xanadu/" class="red">an alternative to the world wide</a> web with unbreakable, two-way links, a simplified copyright system, and side-by-side comparison between connected documents</li>
+                    <li><a href="https://www.youtube.com/watch?v=72M5kcnAL-4" class="red"><img src="px_01.png" alt="Smiley face" height="200px"></a></li>
+                </ul>
+            </li>
+            <li class="Location">
+                <h2 class="top-ten"><span>10</span>strategies</h2>
+                <ul class="DateList">
+                    <li><a href="https://moz.com/learn/seo/external-link" class="red">seo best practices</a></li>
+                    <li>&bull;the trustworthiness of the linking domain.<br>&bull;the popularity of the linking page.<br>&bull;the relevancy of the content between the source page and the target page.
+                    the anchor text used in the link.<br>&bull;The number of links to the same page on the source page.<br>&bull;the number of root domains that link to the target page.<br>&bull;the number of variations that are used as anchor text to links to the target page.<br>&bull;the ownership relationship between the source and target domains.</li>
+                    <li><a href="https://www.wired.co.uk/article/google-link-hyperlink-seo" class="red">How Google warped the hyperlink, wired, 2019</li>
+                    <li class="indent">"today, the major search engines use many metrics to determine the value of external links. Some of these metrics include:"</li>
+
+                </ul>
+            </li>
+            <li class="Location">
+                <h2><span>11</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>12</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>13</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>14</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>15</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>16</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>17</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>18</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>19</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>20</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>21</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>22</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>23</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>24</span></h2>
+            </li>
+            <li class="Location">
+                <h2><span>25</span></h2>
+            </li>
+
+
+        </ol>
+    </div>
+    <div class="right-side">
+        <h2>what is <a class="red" href="https://www.diplomacy.edu/language/hypertext" target="_blank">hypertext?</a></h2>
+        <h2>“by hypertext i mean non-sequential writing - text that branches and allows choices to the reader, best read at an interactive screen. as popularly conceived, this is a series of text chunks connected by links which offer the reader different pathways.”</h2>
+        <h2><a href="" class="blue">–ted nelson,</a> who coined the term around <a href="https://www.theatlantic.com/photo/2015/03/50-years-ago-a-look-back-at-1965/387493/" class="blue">1965</a></h2>
+        <a href="https://en.wikipedia.org/wiki/Intertwingularity" class="image-one"><img src="tn-sketch_02.png" alt="Smiley face" height="500"></a>
+    </div>
+    <div class="right-side-two">
+        <h2>if work is to become play, then <a href="http://www.leefelsenstein.com/wp-content/uploads/2013/01/W_P_blowup.jpg" class="blue">tools must become toys.</a><a href="https://searchworks.stanford.edu/catalog?f%5Bcollection%5D%5B%5D=cj445qq4021" class="red"><br>–people’s computer company, 1975</a></h2>
+    </div>
+    <div class="footer">
+        <!-- <h2><span class="note"> [note]</span><br><a class="red" href="">→ red hypertext is for source citation </a><br><a class="blue" href="">→ blue hypertext is for suggested further research <br></a><a href="" class="green">→ green hypertext is for internal links</a></h2> -->
+    </div>
+
+    <script>
+        // get a list of all location elements..
+        var LocationElements = document.querySelectorAll('.Location');
+
+        // for each location element...
+        LocationElements.forEach(function(element) {
+
+                // add 'click' event listener to the element...
+                element.addEventListener('click', function() {
+
+                    // get child DateList element
+                    var dateList = element.querySelector('.DateList');
+
+                    // check if class is visible
+                    if (dateList.classList.contains('is-visible')) {
+                        // if visible, then remove
+                        dateList.classList.remove('is-visible');
+                    } else {
+                        // or the opposite, add it
+                        dateList.classList.add('is-visible');
+                    }
+
+                })
+        });
+
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>
