@@ -18,6 +18,7 @@
             font-size: 15px;
             text-decoration: none;
             color: black;
+            cursor: pointer;
         }
         a {
             text-decoration: none;
@@ -166,6 +167,32 @@
 
                 })
         });
+
+
+
+
+        LocationElements.forEach(function(element) {
+
+                // add 'click' event listener to the element...
+                element.addEventListener('mouseenter', function() {
+
+                    // get child DateList element
+                    var dateList = element.querySelector('.DateList');
+
+                    // check if class is visible
+                    if (dateList.classList.contains('is-visible')) {
+                        // if visible, then remove
+                        dateList.classList.remove('is-visible');
+                    } else {
+                        // or the opposite, add it
+                        dateList.classList.add('is-visible');
+                    }
+
+                })
+        });
+
+
+
 
         var date = document.querySelector('.Date');
         var dateText = date.innerText;
