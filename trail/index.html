@@ -45,97 +45,89 @@
             bottom: 20px;
             right: 30px;
         }
-
+/*
         .DateList {
             display: none;
-        }
+        } */
 
         .DateList.is-visible {
             display: block;
         }
 
+        .beforeandafter{
+            position: fixed;
+            top: 375px;
+            left: 1000px;
+            line-height: 18px;
+        }
+
     </style>
 </head>
 <body>
+    <p class="beforeandafter">Before & After: <br>A Trail of Landscapes</p>
     <div>
-        <ol class="LocationList">
-            <li class="Location">
-                <h2>317 Broadway Avenue, Bayonne, NJ</h2>
-                <ul class="DateList">
-                    <li class="Date">1978</li>
-                    <li><a href="broadway_2018.html">2018</a></li>
-                </ul>
-            </li>
+      <ol>
 
-            <li class="Location">
-                <h2>1 Lefante Way, Bayonne, NJ</h2>
-                <ul class="DateList">
-                    <li><a href="lefante_1995.html">1995</a></li>
-                    <li><a href="lefante_2002.html">2002</a></li>
-                    <li><a href="lefante_2004.html">2004</a></li>
-                    <li><a href="lefante_2005.html">2005</a></li>
-                    <li><a href="lefante_2008.html">2008</a></li>
-                    <li><a href="lefante_2010.html">2010</a></li>
-                    <li><a href="lefante_2014.html">2014</a></li>
-                    <li><a href="lefante_2018.html">2018</a></li>
-                </ul>
-            </li>
+        <li>317 Broadway Avenue, Bayonne, NJ</li>
+          <div>
+            <p><a href="broadway_1978.html">1978</a></p>
+            <p><a href="broadway_2018.html">2018</a></p>
+          </div>
 
-            <li class="Location">
-                <h2>1800 Arch Street, Philadelphia, PA</h2>
-                <ul class="DateList">
-                    <li><a href="arch_2011.html">2011</a></li>
-                    <li><a href="arch_2014.html">2014</a></li>
-                    <li><a href="arch_2017.html">2017</a></li>
-                    <li><a href="arch_2018.html">2018</a></li>
-                </ul>
-            </li>
+        <li>1 Lefante Way, Bayonne, NJ</li>
+          <div>
+            <p><a href="lefante_1995.html">1995</a></p>
+            <p><a href="lefante_2002.html">2002</a></p>
+            <p><a href="lefante_2004.html">2004</a></p>
+            <p><a href="lefante_2005.html">2005</a></p>
+            <p><a href="lefante_2008.html">2008</a></p>
+            <p><a href="lefante_2010.html">2010</a></p>
+            <p><a href="lefante_2014.html">2014</a></p>
+            <p><a href="lefante_2018.html">2018</a></p>
+          </div>
 
-            <li class="Location">
-                <h2>World Trade Center, New York, NY<h2>
-                <ul class="DateList">
-                    <li><a href="wtc_1994.html">1994</a></li>
-                    <li><a href="wtc_1997.html">1997</a></li>
-                    <li><a href="wtc_2001a.html">2001a</a></li>
-                    <li><a href="wtc_2001b.html">2001b</a></li>
-                    <li><a href="wtc_2002.html">2002</a></li>
-                    <li><a href="wtc_2008.html">2008</a></li>
-                    <li><a href="wtc_2018.html">2018</a></li>
-                </ul>
-            </li class="Location">
+        <li>1800 Arch Street, Philadelphia, PA</li>
+          <div>
+            <p><a href="arch_2011.html">2011</a></p>
+            <p><a href="arch_2014.html">2014</a></p>
+            <p><a href="arch_2017.html">2017</a></p>
+            <p><a href="arch_2018.html">2018</a></p>
+          </div>
+        <li>World Trade Center, New York, NY</li>
+          <div>
+            <p><a href="wtc_1994.html">1994</a></p>
+            <p><a href="wtc_1997.html">1997</a></p>
+            <p><a href="wtc_2001a.html">2001a</a></p>
+            <p><a href="wtc_2001b.html">2001b</a></p>
+            <p><a href="wtc_2002.html">2002</a></p>
+            <p><a href="wtc_2008.html">2008</a></p>
+            <p><a href="wtc_2018.html">2018</a></p>
+          </div>
 
-            <li class="Location">
-                <h2>1700 N. 5th Street, Philadelphia, PA</h2>
-                <ul class="DateList">
-                    <li><a href="1700_2007.html">2007</a></li>
-                    <li><a href="1700_2012.html">2012</a></li>
-                    <li><a href="1700_2018.html">2018</a></li>
-                </ul>
-            </li>
+        <li>1700 N. 5th Street, Philadelphia, PA</li>
+          <div>
+            <p><a href="1700_2007.html">2007</a></p>
+            <p><a href="1700_2012.html">2012</a></p>
+            <p><a href="1700_2018.html">2018</a></p>
+          </div>
 
-            <li class="Location">
-                <h2>24 Grove Street, Worcester, MA</h2>
-                <ul class="DateList">
-                    <li><a href="grove_2007.html">2007</a></li>
-                    <li><a href="grove_2008.html">2008</a></li>
-                    <li><a href="grove_2011.html">2011</a></li>
-                    <li><a href="grove_2017.html">2017</a></li>
-                    <li><a href="grove_2018.html">2018</a></li>
-                </ul>
-            </li>
+        <li>24 Grove Street, Worcester, MA</li>
+          <div>
+            <p><a href="grove_2007.html">2007</a></p>
+            <p><a href="grove_2008.html">2008</a></p>
+            <p><a href="grove_2011.html">2011</a></p>
+            <p><a href="grove_2017.html">2017</a></p>
+            <p><a href="grove_2018.html">2018</a></p>
+          </div>
 
-            <li class="Location">
-                <h2>Worcester Regional Airport, Worcester, MA</h2>
-                <ul class="DateList">
-                    <li><a href="airport_2007.html">2007</a></li>
-                    <li><a href="airport_2018.html">2018</a></li>
-                </ul>
-            </li>
+        <li>Worcester Regional Airport, Worcester, MA</li>
+          <div>
+            <p><a href="airport_2007.html">2007</a></p>
+            <p><a href="airport_2018.html">2018</a></p>
+          </div>
 
-        </ol>
-    </div>
-
-    <div class="dads-house">
+      </ol>
+    </div>    <div class="dads-house">
         <img src="images_01/misc/IMG_9933.jpeg" alt="Smiley face" height="400">
     </div>
 
@@ -143,63 +135,7 @@
         <p><a href="../index.html">Home</a></p>
     </div>
 
-    <script>
-        // get a list of all location elements..
-        var LocationElements = document.querySelectorAll('.Location');
 
-        // for each location element...
-        LocationElements.forEach(function(element) {
-
-                // add 'click' event listener to the element...
-                element.addEventListener('click', function() {
-
-                    // get child DateList element
-                    var dateList = element.querySelector('.DateList');
-
-                    // check if class is visible
-                    if (dateList.classList.contains('is-visible')) {
-                        // if visible, then remove
-                        dateList.classList.remove('is-visible');
-                    } else {
-                        // or the opposite, add it
-                        dateList.classList.add('is-visible');
-                    }
-
-                })
-        });
-
-
-
-
-        LocationElements.forEach(function(element) {
-
-                // add 'click' event listener to the element...
-                element.addEventListener('mouseenter', function() {
-
-                    // get child DateList element
-                    var dateList = element.querySelector('.DateList');
-
-                    // check if class is visible
-                    if (dateList.classList.contains('is-visible')) {
-                        // if visible, then remove
-                        dateList.classList.remove('is-visible');
-                    } else {
-                        // or the opposite, add it
-                        dateList.classList.add('is-visible');
-                    }
-
-                })
-        });
-
-
-
-
-        var date = document.querySelector('.Date');
-        var dateText = date.innerText;
-        date.addEventListener('mouseenter', function() {
-            document.body.style.backgroundImage = 'url(' + dateText + '.png)';
-        })
-    </script>
 
 </body>
 </html>
